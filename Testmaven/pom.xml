@@ -3,7 +3,7 @@
   <groupId>Obsqura</groupId>
   <artifactId>Testmaven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
+ <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -15,15 +15,19 @@
 			</plugin>
 
 
+
+			
 <plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.1.0</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<mainClass>helloworld.SampleTest</mainClass>
+					<archive>
+						<manifest>
+							<mainClass>helloworld.SampleTest</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
-
-</plugins>
+		</plugins>
 	</build>
 </project>
